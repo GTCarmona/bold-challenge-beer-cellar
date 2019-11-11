@@ -10,7 +10,10 @@ export default function Home() {
       </p>
       <br />
 
-      <p>To start, just sign-up and start adding beers to your collection!</p>
+      <p>
+        To start, click sign-up or login and start adding beers to your
+        collection!
+      </p>
     </div>
   )
 }

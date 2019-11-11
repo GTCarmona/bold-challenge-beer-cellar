@@ -48,6 +48,7 @@ export default function AddBeer(props) {
           description: "",
           nationality: "",
         })
+        props.history.push("/beers")
       })
       .catch(err => setState({ message: err.toString() }))
   }

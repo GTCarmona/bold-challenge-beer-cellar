@@ -16,8 +16,8 @@ function MainNavbar() {
       <Navbar bg="$primary">
         <Navbar.Brand href="/">Bold Beers</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/beers">My Beers</Nav.Link>
-          <Nav.Link href="/add-beer">Add Beer</Nav.Link>
+          {api.isLoggedIn() && <Nav.Link href="/beers">My Beers</Nav.Link>}
+          {api.isLoggedIn() && <Nav.Link href="/add-beer">Add Beer</Nav.Link>}
           {!api.isLoggedIn() && <Nav.Link href="/signup">Signup</Nav.Link>}
           {!api.isLoggedIn() && <Nav.Link href="/login">Login</Nav.Link>}
           {api.isLoggedIn() && (
