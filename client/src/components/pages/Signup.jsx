@@ -22,7 +22,7 @@ export default function Signup(props) {
     e.preventDefault()
     let data = {
       username: state.username,
-      email: state.email,
+      // email: state.email,
       password: state.password,
     }
     api
@@ -45,14 +45,14 @@ export default function Signup(props) {
           onChange={handleInputChange}
         />{" "}
         <br />
-        email:{" "}
+        {/* email:{" "}
         <input
           type="text"
           value={state.email}
           name="name"
           onChange={handleInputChange}
         />{" "}
-        <br />
+        <br /> */}
         Password:{" "}
         <input
           type="password"
