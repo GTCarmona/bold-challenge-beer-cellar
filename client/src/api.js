@@ -82,6 +82,12 @@ export default {
       .then(res => res.data)
       .catch(errHandler)
   },
+  getBeerByTypes(beerId) {
+    return service
+      .get(`/beers/${beerId}`)
+      .then(res => res.data)
+      .catch(errHandler)
+  },
 
   // addPicture(file) {
   //   const formData = new FormData()

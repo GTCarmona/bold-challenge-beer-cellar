@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import api from "../../api"
-import Card from "react-bootstrap/Card"
 import CardDeck from "react-bootstrap/CardDeck"
 import Form from "react-bootstrap/Form"
 import Col from "react-bootstrap/Col"

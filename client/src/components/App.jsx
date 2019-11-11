@@ -4,6 +4,8 @@ import MainNavbar from "./MainNavbar"
 import Home from "./pages/Home"
 import Beers from "./pages/Beers"
 import AddBeer from "./pages/AddBeer"
+import BeerDetail from "./pages/BeerDetail"
+
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 
@@ -14,6 +16,8 @@ export default function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/beers" component={Beers} />
+        <Route path="/beerDetail/:id" component={BeerDetail} />
+
         <Route path="/add-beer" component={AddBeer} />
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />

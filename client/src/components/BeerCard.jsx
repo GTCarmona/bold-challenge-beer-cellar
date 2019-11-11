@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 
 export default function BeerCard(props) {
   const beer = props.selectedBeer.beer
@@ -19,6 +20,9 @@ export default function BeerCard(props) {
         </Card.Text>
 
         <Card.Text>{beer.description}</Card.Text>
+        <Button href={`beerDetail/${beer._id}`} variant="primary">
+          Check details{" "}
+        </Button>
       </Card.Body>
     </Card>
   )

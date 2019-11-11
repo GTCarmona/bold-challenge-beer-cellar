@@ -13,6 +13,7 @@ router.get("/", (req, res, next) => {
 })
 // display one beer
 router.get("/:beerId", (req, res, next) => {
+  const beerId = req.params.beerId
   Beer.findById(beerId)
     .then(beer => {
       res.json(beer)
