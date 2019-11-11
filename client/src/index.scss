@@ -1,35 +1,12 @@
 // --------------------
 // Definition of variables
-$primary: #32c3ff;
+$primary: purple;
 
-// ----------------------------------------
-// To install Boostrap:
-// 1) Run in the client folder: $ npm i bootstrap
-// 2) Import bootstrap with the following line
-// @import '../node_modules/bootstrap/scss/bootstrap.scss';
-//
-// To install Reactstrap:
-// 1) Run in the client folder: $ npm i reactstrap
-// 2) Go to the official documentation and take some examples: https://reactstrap.github.io/
-// import { Button } from 'reactstrap';
-// <Button color="danger">Danger!</Button>
-// ----------------------------------------
-
-// --------------------
-// Style reusable for all components
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
-
-.info {
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #5776e9;
-  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .info.info-danger {
@@ -70,30 +47,11 @@ body {
     font-size: large;
   }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
+  // --------------------
+  // Style for Home component
+  .Home {
+    p {
+      font-size: 1.2em;
     }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-// --------------------
-// Style for Home component
-.Home {
-  p {
-    font-size: 1.2em;
-  }
-}
-
-// --------------------
-// Style for Secret component
-.Secret {
-  .result {
-    font-size: 1.2em;
-    color: $primary;
   }
 }

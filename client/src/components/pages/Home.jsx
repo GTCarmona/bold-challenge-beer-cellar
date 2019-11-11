@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react"
 
 export default function Home() {
   return (
     <div className="Home">
-      <h2>Home</h2>
-      <p>This is a sample project with the MERN stack</p>
+      <h2>Bold Beers</h2>
+      <p>
+        Here is a simple app for you to add and keep track of your favorite
+        beers!
+      </p>
     </div>
   )
 }
