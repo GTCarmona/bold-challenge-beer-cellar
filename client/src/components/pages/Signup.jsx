@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 export default function Signup(props) {
   const [state, setState] = useState({
     username: "",
-    name: "",
+    email: "",
     password: "",
     message: null,
   })
@@ -22,14 +22,14 @@ export default function Signup(props) {
     e.preventDefault()
     let data = {
       username: state.username,
-      name: state.name,
+      email: state.email,
       password: state.password,
     }
     api
       .signup(data)
       .then(result => {
         console.log("SUCCESS!")
-        props.history.push("/") // Redirect to the home page
+        props.history.push("/")
       })
       .catch(err => setState({ message: err.toString() }))
   }
@@ -45,10 +45,10 @@ export default function Signup(props) {
           onChange={handleInputChange}
         />{" "}
         <br />
-        Name:{" "}
+        email:{" "}
         <input
           type="text"
-          value={state.name}
+          value={state.email}
           name="name"
           onChange={handleInputChange}
         />{" "}

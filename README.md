@@ -2,7 +2,7 @@
 
 Full MERN stack developed between 4~5 hours
 
-Setup: boilerplate used during my time in IronHack bootcamp as a student, same used in my last project. I chosed to do this because of the timeframe, as this gives me the basic setup for MongoDB and the authentication process with Passport.
+Setup: I used a boilerplate used during my time in IronHack bootcamp as a student, same used in my last project. I chosed to do mainly because of the timeframe, as this offers me the basic setup for MongoDB and the authentication process with Passport.
 
 Link to deployed version: https://challenge-my-beer-cellar.herokuapp.com/
 
@@ -17,13 +17,13 @@ Features able to implement within the time period
 - Sorting by beer name, and filtering by beer type OR style (not 100%)
 - User signup and login, so initialy only the user would see the beers that were added by him, an they are stored in the database.
 
-I wanted to implement some elements with a database because I thought it made sense given the context and I wanted to practice this implementation together with React Hooks
+I wanted to implement some elements with Node.js and databases because I thought it made sense given the context of users creating data. I also wanted to practice this implementation together with React Hooks, which I haven't done before
 
 With more time I would:
 
 - I did not prioritize the style at all, so I would work on it.
 - Add comments and ratings
 - Image upload for beers and user
-- Make it possible for other users to comment and rate your beers, and vice-versa
+- Make it possible for other users to comment and rate each others beers
 
 Reference: https://www.thebeerstore.ca/
