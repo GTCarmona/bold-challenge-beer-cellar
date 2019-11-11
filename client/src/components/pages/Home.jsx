@@ -8,6 +8,9 @@ export default function Home() {
         Here is a simple app for you to add and keep track of your favorite
         beers!
       </p>
+      <br />
+
+      <p>To start, just sign-up and start adding beers to your collection!</p>
     </div>
   )
 }

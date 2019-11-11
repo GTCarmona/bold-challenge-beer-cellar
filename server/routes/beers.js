@@ -5,7 +5,7 @@ const router = express.Router()
 
 // display all beers
 router.get("/", (req, res, next) => {
-  Beer.find()
+  Beer.find({ _creator: req.user._id })
     .then(beers => {
       res.json(beers)
     })

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import api from "../../api"
 import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button"
 
 export default function Signup(props) {
   const [state, setState] = useState({
@@ -35,8 +36,7 @@ export default function Signup(props) {
   return (
     <div className="Signup">
       <h2>Signup</h2>
-      <Form>
-        
+      <form>
         Username:{" "}
         <input
           type="text"
@@ -61,7 +61,9 @@ export default function Signup(props) {
           onChange={handleInputChange}
         />{" "}
         <br />
-        <button onClick={e => handleClick(e)}>Signup</button>
+        <Button variant="secondary" onClick={e => handleClick(e)}>
+          Submit
+        </Button>
       </form>
       {state.message && <div className="info info-danger">{state.message}</div>}
     </div>
