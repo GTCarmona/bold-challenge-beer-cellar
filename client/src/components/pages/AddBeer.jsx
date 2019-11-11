@@ -53,12 +53,12 @@ export default function AddBeer(props) {
   }
   return (
     <div className="AddBeer">
-      <h2>Add beer</h2>
+      <h2>Add a new Beer</h2>
 
       <Container>
         <Form>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Beer Name</Form.Label>
             <Form.Control
               type="text"
               value={state.name}
@@ -89,7 +89,7 @@ export default function AddBeer(props) {
           <Form.Row>
             <Col>
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>Select Style</Form.Label>
+                <Form.Label>Style</Form.Label>
                 <Form.Control
                   as="select"
                   value={state.style}
@@ -114,7 +114,7 @@ export default function AddBeer(props) {
             </Col>
             <Col>
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>Select type</Form.Label>
+                <Form.Label> Type</Form.Label>
                 <Form.Control
                   as="select"
                   value={state.type}
@@ -131,7 +131,9 @@ export default function AddBeer(props) {
               </Form.Group>
             </Col>
           </Form.Row>
-          <Button onClick={e => handleClick(e)}>Submit</Button>
+          <Button variant="secondary" size="lg" onClick={e => handleClick(e)}>
+            Submit
+          </Button>
         </Form>
 
         {message && <div className="info">{message}</div>}

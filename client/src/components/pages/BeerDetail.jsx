@@ -10,7 +10,6 @@ export default function BeerDetail(props) {
     api
       .getBeerDetail(props.match.params.id)
       .then(beer => {
-        console.log(beer)
         setBeer(beer)
       })
       .catch(err => console.log(err))
@@ -20,7 +19,14 @@ export default function BeerDetail(props) {
     <div className="BeerDetail">
       <h1>Beer Details</h1>
       <Container>
-        <BeerCard selectedBeer={{ beer }} />
+        <h2>{beer.name}</h2> <br />
+        <h4> Type:</h4>
+        {beer.type}
+        <h4>Style:</h4> {beer.style}
+        <h4>Description</h4>
+        <p>{beer.description}</p>
+        <h4>Nationality</h4>
+        <p>{beer.nationality}</p>
       </Container>
     </div>
   )

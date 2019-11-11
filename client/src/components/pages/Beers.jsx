@@ -58,7 +58,7 @@ export default function Beers() {
               name="style"
               onChange={handleChange}
             >
-              <option>See All</option>
+              <option></option>
               <option>Amber</option>
               <option>Blonde</option>
               <option>Brown</option>
@@ -84,7 +84,7 @@ export default function Beers() {
               onChange={handleChange}
               placeholder="type"
             >
-              <option>See All</option>
+              <option></option>
               <option>Malt</option>
               <option>Stout</option>
               <option>Ale</option>
@@ -93,7 +93,9 @@ export default function Beers() {
           </Form.Group>
         </Col>
       </Form.Row>
-      <Button onClick={sortByName}>Click to Sort by Beer name</Button>
+      <Button variant="secondary" onClick={sortByName}>
+        Click to Sort by Beer name
+      </Button>
       <CardDeck>
         {state.beers
           .filter(beer => filterBySearch(beer))

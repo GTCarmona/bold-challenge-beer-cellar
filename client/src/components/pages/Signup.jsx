@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import api from '../../api'
+import React, { useState } from "react"
+import api from "../../api"
+import Form from "react-bootstrap/Form"
 
 export default function Signup(props) {
   const [state, setState] = useState({
-    username: '',
-    name: '',
-    password: '',
+    username: "",
+    name: "",
+    password: "",
     message: null,
   })
 
@@ -26,38 +27,39 @@ export default function Signup(props) {
     api
       .signup(data)
       .then(result => {
-        console.log('SUCCESS!')
-        props.history.push('/') // Redirect to the home page
+        console.log("SUCCESS!")
+        props.history.push("/") // Redirect to the home page
       })
       .catch(err => setState({ message: err.toString() }))
   }
   return (
     <div className="Signup">
       <h2>Signup</h2>
-      <form>
-        Username:{' '}
+      <Form>
+        
+        Username:{" "}
         <input
           type="text"
           value={state.username}
           name="username"
           onChange={handleInputChange}
-        />{' '}
+        />{" "}
         <br />
-        Name:{' '}
+        Name:{" "}
         <input
           type="text"
           value={state.name}
           name="name"
           onChange={handleInputChange}
-        />{' '}
+        />{" "}
         <br />
-        Password:{' '}
+        Password:{" "}
         <input
           type="password"
           value={state.password}
           name="password"
           onChange={handleInputChange}
-        />{' '}
+        />{" "}
         <br />
         <button onClick={e => handleClick(e)}>Signup</button>
       </form>

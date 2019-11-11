@@ -6,12 +6,13 @@ import { withRouter } from "react-router"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 
-function MainNavbar(props) {
+function MainNavbar() {
   function handleLogoutClick(e) {
     api.logout()
   }
+
   return (
-    <nav className="NavBar">
+    <nav className="Navbar">
       <Navbar bg="$primary">
         <Navbar.Brand href="/">Bold Beers</Navbar.Brand>
         <Nav className="mr-auto">
