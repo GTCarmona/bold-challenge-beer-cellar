@@ -76,6 +76,16 @@ export default function AddBeer(props) {
               onChange={handleInputChange}
             />
           </Form.Group>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Nationality</Form.Label>
+            <Form.Control
+              type="text"
+              rows="3"
+              value={state.nationality}
+              name="nationality"
+              onChange={handleInputChange}
+            />
+          </Form.Group>
           <Form.Row>
             <Col>
               <Form.Group controlId="exampleForm.ControlSelect1">
