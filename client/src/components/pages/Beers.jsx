@@ -4,6 +4,7 @@ import CardDeck from "react-bootstrap/CardDeck"
 import Form from "react-bootstrap/Form"
 import Col from "react-bootstrap/Col"
 import BeerCard from "../BeerCard"
+import Button from "react-bootstrap/Button"
 
 export default function Beers() {
   const [state, setState] = useState({ beers: [], search: "" })
@@ -26,7 +27,24 @@ export default function Beers() {
   function filterBySearch(beer) {
     return beer.type.includes(state.search) || beer.style.includes(state.search)
   }
-  console.log(state)
+
+  function sortByName() {
+    const sortedArray = state.beers.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1
+      }
+      if (a.name < b.name) {
+        return -1
+      }
+      return 0
+    })
+    console.log(sortedArray)
+    setState({
+      ...state,
+      beers: sortedArray,
+    })
+  }
+
   return (
     <div className="Beers">
       <h2>List of Beers</h2>
@@ -75,7 +93,7 @@ export default function Beers() {
           </Form.Group>
         </Col>
       </Form.Row>
-
+      <Button onClick={sortByName}>Click to Sort by Beer name</Button>
       <CardDeck>
         {state.beers
           .filter(beer => filterBySearch(beer))
